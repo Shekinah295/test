@@ -32,6 +32,8 @@
                             echo '<div class="err">Successful</div>';
                         }elseif(isset($_GET["failed"])){
                             echo '<div class="err">Failed</div>';
+                        }elseif(isset($_GET["err_exist"])){
+                            echo '<div class="err">Email already exists in our system</div>';
                         }else {
                             echo '<div class="err">An error occurred</div>'; 
                         }

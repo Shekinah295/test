@@ -59,11 +59,17 @@ if(isset($_POST["wardname"]) && !empty($_POST["wardname"])){
     header("location:../../signup.php?err_wardname");
 }
 
-//STEP 3: Add Information To Database And Give User Feedback
-if($UserAddManager->add($fullname,$username,$password,$email,$gender,$nickname,$wardname)){
-    header("location:../../signup.php?successful");
-}else{
-    header("location:../../signup.php?failed");
+//check if email address exists
+if($UserSelectManager->get_email_exist($email)){
+    header("location:../../signup.php?err_exist");
+} else {
+
+    //STEP 3: Add Information To Database And Give User Feedback
+    if($UserAddManager->add($fullname,$username,$password,$email,$gender,$nickname,$wardname)){
+        header("location:../../signup.php?successful");
+    }else{
+        header("location:../../signup.php?failed");
+    }
 }
 
 

@@ -80,6 +80,15 @@ namespace UserAccountsManager;
                             return false;
                         }    
         }
+        public function get_email_exist($email){
+            $sql = "SELECT * FROM `users`
+                    WHERE `users`.`email` = '$email';";
+                    $q = $this->connect()->query($sql);
+                    $result = $q->fetch_all();
+                    if (is_array($result) && !empty($result))
+                        return true; 
+                    else return false;   
+        }
     }
 
 ?> 
