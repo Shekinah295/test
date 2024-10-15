@@ -45,7 +45,7 @@ namespace UserAccountsManager;
             $sql = "SELECT * FROM `users`
                     WHERE `users`.`email` = '$email';";
                     $q = $this->connect()->query($sql);
-                    $result = $q->fetch_all();
+                    $result = $q->fetch_assoc();
                     if (is_array($result)){
                         echo "Selected";
                         return $result;

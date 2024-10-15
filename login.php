@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -34,6 +34,12 @@
                             echo '<div class="err">Failed</div>';
                         }elseif(isset($_GET["err_exist"])){
                             echo '<div class="err">Email already exists in our system</div>';
+                        }elseif(isset($_GET["unexist"])){
+                            echo '<div class="err">Email Does Not Exist, Create An Account</div>';
+                        }elseif(isset($_GET["wrong_password"])){
+                            echo '<div class="err">Wrong Password</div>';
+                        }elseif(isset($_GET["err_sessn"])){
+                            echo '<div class="err">Login Initialization Failed, Try Again</div>';
                         }else {
                             echo '<div class="err">An error occurred</div>'; 
                         }

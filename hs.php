@@ -25,6 +25,7 @@ require_once("./classes/report/report.select.class.php");
 require_once("./classes/report/report.update.class.php");
 require_once("./classes/report/report.delete.class.php");
 require_once("./classes/utils/utils.class.php");
+require_once("./classes/session/session.class.php");
 
 use UserAccountsManager\UserAddManager;
 use UserAccountsManager\UserSelectManager;
@@ -51,8 +52,7 @@ use ReportManager\ReportSelectManager;
 use ReportManager\ReportUpdateManager;
 use ReportManager\ReportDeleteManager;
 use UtilityManager\Utils;
-
-
+use SessionManagement\SessionManager;
 
 $UserAddManager = new UserAddManager();
 $UserSelectManager = new UserSelectManager();
@@ -79,5 +79,5 @@ $ProblemSelectManager = new ProblemSelectManager();
 $ProblemUpdateManager = new ProblemUpdateManager();
 $ProblemDeleteManager = new ProblemDeleteManager();
 $Utils = new Utils();
-
+$SessionManager = new SessionManager();
 ?>

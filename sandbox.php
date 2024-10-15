@@ -1,5 +1,5 @@
 <?php
-require_once("./headers.php");
+// require_once("./headers.php");
 
 //USERS//
 
@@ -257,7 +257,45 @@ require_once("./headers.php");
 
 // $ReportDeleteManager->delete_pd("Bad roads");
 
+//Start git repository
+//git init 
 
+//All files to the staging environment
+//git add . | git add --all
+
+//Commit files to staging area
+//git commit -m "v 1.1"
+
+//Check files in staging area
+//git status
+
+//Add remote repository URL
+// git remote add origin https://github.com/Shekinah295/test
+
+// //Sending to remote repository
+// git push -u origin master
+
+
+// //Creating a branch
+// git branch login
+
+// //check branches
+// git branch 
+
+
+// //switch 
+// git checkout login
+//     git add . 
+//     git commit -m "Login files v.0.1"
+//     git push -u origin login
+
+// //check into master branch
+// git checkout master 
+// git merge login
+
+
+
+echo password_hash(1234,PASSWORD_DEFAULT);
 
 
 
